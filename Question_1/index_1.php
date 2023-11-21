@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Question 1</title>
 </head>
 <body>
@@ -28,12 +29,21 @@ $personnageStatement = $mysqlClient->prepare($sqlQuery);
 $personnageStatement->execute();
 $personnages = $personnageStatement->fetchAll();
 
-// On affiche chaque recette une à une
-foreach ($personnages as $personnageData) {
+// On affiche chaque personnage un à un
 ?>
-    <p><?php echo $personnageData['nom_personnage']; ?></p>
-<?php
-}
-?>
+<table>
+    <thead>
+        <tr>
+            <th class="table">Nom du personnage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($personnages as $personnage) { ?>
+            <tr>
+                <td class="table"><?php echo $personnage['nom_personnage']; ?></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
 </body>
 </html>
