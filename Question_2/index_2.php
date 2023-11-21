@@ -39,7 +39,7 @@ $lieux = $lieuStatement->fetchAll();
     <tbody>
         <?php foreach ($lieux as $lieuData) { ?>
             <tr>
-                <td class="table"><?php echo $lieuData['nom_lieu']; ?></td>
+                <td class="tableLieu"><?php echo $lieuData['nom_lieu']; ?></td>
                 <td class="table"><?php echo $lieuData['nbHabitants']; ?></td>
             </tr>
         <?php } ?>

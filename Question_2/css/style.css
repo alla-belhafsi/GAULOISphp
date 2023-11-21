@@ -1,4 +1,8 @@
 .table {
-    border: 1px solid black; padding: 8px;
+    border: 1px solid black;
     text-align: center;
+}
+.tableLieu {
+    border: 1px solid black;
+    text-align: start;
 }
