@@ -22,8 +22,7 @@ $sqlQuery = 'SELECT
             FROM personnage
             INNER JOIN lieu ON personnage.id_lieu = lieu.id_lieu
             INNER JOIN specialite ON personnage.id_specialite = specialite.id_specialite
-            GROUP BY personnage.id_personnage, specialite.id_specialite, lieu.id_lieu
-            ORDER BY personnage.id_personnage';
+            ORDER BY nom_specialite';
 $personnageStatement = $mysqlClient->prepare($sqlQuery);
 $personnageStatement->execute();
 $personnages = $personnageStatement->fetchAll();
