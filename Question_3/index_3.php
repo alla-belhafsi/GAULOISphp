@@ -36,7 +36,7 @@ $personnageStatement = $mysqlClient->prepare($sqlQuery);
 $personnageStatement->execute();
 $personnages = $personnageStatement->fetchAll();
 
-// Affichage dans un tableau HTML à deux colonnes
+// Affichage dans un tableau HTML à trois colonnes
 ?>
 <link rel="stylesheet" href="css/style.css">
 <table>
