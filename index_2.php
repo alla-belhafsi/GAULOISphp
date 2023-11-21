@@ -31,15 +31,15 @@ $lieux = $lieuStatement->fetchAll();
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Nom du lieu</th>
-            <th style="text-align: center;">Nombre d'habitants</th>
+            <th style="border: 1px solid black; padding: 8px; text-align: center;">Nom du lieu</th>
+            <th style="border: 1px solid black; padding: 8px; text-align: center;">Nombre d'habitants</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($lieux as $lieuData) { ?>
             <tr>
-                <td><?php echo $lieuData['nom_lieu']; ?></td>
-                <td style="text-align: center;"><?php echo $lieuData['nbHabitants']; ?></td>
+                <td style="border: 1px solid black; padding: 8px;"><?php echo $lieuData['nom_lieu']; ?></td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo $lieuData['nbHabitants']; ?></td>
             </tr>
         <?php } ?>
     </tbody>
