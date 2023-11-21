@@ -1,5 +1,14 @@
 <!-- OBJECTIF 1 --- La liste des villages avec le nombre d'habitants de chaque village (un tableau HTML à 2 colonnes: nom du lieu / nombre d'habitants) -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Question 2</title>
+</head>
+<body>
 <?php
 try
 {
@@ -28,7 +37,7 @@ $lieux = $lieuStatement->fetchAll();
 
 // Affichage dans un tableau HTML à deux colonnes
 ?>
-<link rel="stylesheet" href="css/style.css">
+
 <table>
     <thead>
         <tr>
@@ -44,4 +53,6 @@ $lieux = $lieuStatement->fetchAll();
             </tr>
         <?php } ?>
     </tbody>
-</table>
+</table>    
+</body>
+</html>
