@@ -10,12 +10,12 @@ catch(Exception $e)
 {
 	// En cas d'erreur, on affiche un message et on arrête tout
         die('Erreur : '.$e->getMessage());
-}
-
-// Si tout va bien, on peut continuer
-
-// On récupère tout le contenu de la table recipes
-$sqlQuery = 'SELECT 
+    }
+    
+    // Si tout va bien, on peut continuer
+    
+    // On récupère tout le contenu de la table recipes
+    $sqlQuery = 'SELECT 
                  lieu.nom_lieu, 
                  COUNT(personnage.id_personnage) AS nbHabitants 
             FROM lieu
@@ -28,21 +28,20 @@ $lieux = $lieuStatement->fetchAll();
 
 // Affichage dans un tableau HTML à deux colonnes
 ?>
+<link rel="stylesheet" href="css/style.css">
 <table>
     <thead>
         <tr>
-            <th style="border: 1px solid black; padding: 8px; text-align: center;">Nom du lieu</th>
-            <th style="border: 1px solid black; padding: 8px; text-align: center;">Nombre d'habitants</th>
+            <th class="table">Nom du lieu</th>
+            <th class="table">Nombre d'habitants</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($lieux as $lieuData) { ?>
             <tr>
-                <td style="border: 1px solid black; padding: 8px;"><?php echo $lieuData['nom_lieu']; ?></td>
-                <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo $lieuData['nbHabitants']; ?></td>
+                <td class="table"><?php echo $lieuData['nom_lieu']; ?></td>
+                <td class="table"><?php echo $lieuData['nbHabitants']; ?></td>
             </tr>
         <?php } ?>
     </tbody>
 </table>
-
-
